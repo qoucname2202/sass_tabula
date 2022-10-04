@@ -316,4 +316,67 @@ header {
   color: #b61984;
 }
 
+.carousel {
+  position: relative;
+  background-image: url("../../../images/yellow_top_wave_01.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.carousel-left {
+  text-align: left;
+}
+.carousel-right img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin: 0;
+  line-height: 0;
+}
+.carousel-heading {
+  font-size: 3.8rem;
+  color: #181818 !important;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+.carousel-heading .heading-superline {
+  line-height: 19.8px;
+  margin: 0px 0px 8.25px;
+  font-size: 16.5px;
+  color: #b61984 !important;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+.carousel-heading .heading-desc {
+  display: block;
+  font-size: 57px;
+  color: #191919 !important;
+  font-weight: 700;
+  line-height: 68.4px;
+}
+.carousel::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("../../../images/Violet_top_left_wave.png");
+  background-position: left bottom;
+  z-index: -1;
+}
+@media (max-width: 600px) {
+  .carousel {
+    padding-top: 7rem;
+  }
+}
+@media (min-width: 600px) {
+  .carousel {
+    padding-top: 5rem;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
