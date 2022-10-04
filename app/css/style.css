@@ -17,7 +17,8 @@ h1 {
 }
 
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
@@ -34,7 +35,8 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 b,
@@ -121,7 +123,8 @@ fieldset {
 }
 
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
@@ -139,7 +142,8 @@ textarea {
 
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
 }
 
@@ -179,7 +183,8 @@ template {
 }
 
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 100%;
   scroll-behavior: smooth;
 }
@@ -192,7 +197,8 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
@@ -252,68 +258,50 @@ header {
   top: 0;
   left: 50%;
   width: 100%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: 1;
 }
 
-.navbar-collapse {
-  flex-grow: unset;
+.navbar .navbar-collapse {
+  -webkit-box-flex: unset;
+      -ms-flex-positive: unset;
+          flex-grow: unset;
   min-height: 90px;
 }
-
-.nav-item {
+.navbar .navbar-collapse .navbar-nav .nav-item {
   padding: 0 1rem;
 }
-.nav-link {
+.navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
   height: 100%;
   width: 100%;
-  line-height: 80px;
-  font-size: 13px;
-  color: #181818 !important;
+}
+.navbar .navbar-collapse .navbar-nav a {
+  line-height: 90px;
+  font-size: 0.8rem;
   font-weight: 600;
-  font-family: "Montserrat", sans-serif;
 }
-.nav-link:hover {
-  color: #b61984 !important;
-}
-.nav-contact {
+.navbar .navbar-collapse .telButton {
   display: inline-block;
-  padding: 14.85px 20.25px;
-  line-height: 13.5px;
+  width: 175px;
+  height: 45px;
+  line-height: 45px;
   background-color: #b61984;
   text-align: center;
-  border-radius: 50px;
-  font-size: 13.5px;
-  color: #fff !important;
-  font-weight: 500;
-  margin: 6px;
-  transition: all 0.5s;
+  border-radius: 25px;
 }
-.nav-contact:hover {
-  background-color: #fff;
-  color: #b61984;
-  border: 1px solid #b61984;
-}
-.nav-contact:hover a,
-.nav-contact:hover i {
-  color: #b61984;
-}
-.nav-contact a {
-  font-family: "Montserrat", sans-serif;
+.navbar .navbar-collapse .telButton a {
+  color: #fff;
+  font-size: 0.9rem;
   text-decoration: none;
+}
+.navbar .navbar-collapse .telButton i {
   color: #fff;
 }
-.nav-contact a:hover {
-  color: #b61984;
-}
-.nav-social a {
-  text-decoration: none;
-  font-size: 14.625px;
-  line-height: 38px;
+.navbar .navbar-collapse a {
   color: #181818;
+  text-decoration: none;
 }
-.nav-social a:hover {
+.navbar .navbar-collapse a:hover {
   color: #b61984;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

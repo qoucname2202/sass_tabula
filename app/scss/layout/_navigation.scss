@@ -1,50 +1,70 @@
 @use '../globals/variables' as *;
-.contact {
+@use '../util/mixin' as *;
+header {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 100%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+.navbar {
+	&-collapse {
+		flex-grow: unset;
+		min-height: 90px;
+	}
+}
+.nav {
+	&-item {
+		padding: 0 1rem;
+	}
 	&-link {
-		display: flex;
-		text-decoration: none;
-		color: $color-white;
-		overflow: hidden;
-		margin: 6px;
-		font-size: 0.9rem;
-		padding: 10px 20px;
-		text-decoration: none;
-		font-weight: 500;
-		text-align: center;
-		background: transparent;
-		-webkit-transition: all 300ms ease;
-		-moz-transition: all 300ms ease;
-		transition: all 300ms ease;
+		height: 100%;
+		width: 100%;
+		line-height: 80px;
+		@include style-text($fs-1, $fw-2, $color-dark);
+		font-family: $font-secondary;
+		&:hover {
+			color: $color-pink !important;
+		}
+	}
+	&-contact {
+		display: inline-block;
+		padding: 14.85px 20.25px;
+		line-height: 13.5px;
 		background-color: $color-pink;
+		text-align: center;
 		border-radius: 50px;
+		@include style-text(13.5px, $fw-1, $color-white);
+		margin: 6px;
+		transition: all 0.5s;
 		&:hover {
 			background-color: $color-white;
 			color: $color-pink;
-			border: 1px solid $color-pink;
+			border: $bd-1 solid $color-pink;
+			a,
+			i {
+				color: $color-pink;
+			}
+		}
+		a {
+			font-family: $font-secondary;
 			text-decoration: none;
+			color: $color-white;
+			&:hover {
+				color: $color-pink;
+			}
 		}
 	}
-}
-.social {
-	&-menu {
-		display: flex;
-		list-style-type: none;
-		gap: 10px;
-	}
-	&-link {
-		color: $color-dark;
-		&:hover {
-			color: $color-pink;
+	&-social {
+		a {
+			text-decoration: none;
+			font-size: 14.625px;
+			line-height: 38px;
+			color: $color-dark;
+			&:hover {
+				color: $color-pink;
+			}
 		}
 	}
-}
-.nav-item {
-	padding: 0px 30px 0px 0px;
-}
-.nav-link {
-	font-family: $font-secondary;
-	font-weight: 600;
-	line-height: 80px;
-	font-size: 13px;
-	color: $color-dark !important;
 }
