@@ -1,0 +1,117 @@
+@use '../globals/variables' as *;
+@use '../util/mixin' as *;
+.footer {
+	background-image: url('../../../images/footer_background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 8em 0px 10em 0px;
+	color: $color-white;
+	&-item {
+		font-family: $font-primary;
+		input {
+			font-size: 15px;
+			font-weight: 300;
+			line-height: 37.2px;
+			text-align: center;
+			border: 1px solid $color-pink;
+			background-color: transparent;
+			border-radius: 50px;
+			color: $color-white;
+			padding: 6px 85px;
+			transition: all 0.5s;
+			&::placeholder {
+				color: $color-white;
+			}
+			&:focus {
+				border-color: $color-white;
+			}
+		}
+	}
+	&-title {
+		@include style-text(23.25px, $fw-3, $color-white);
+		line-height: 27.9px;
+		font-family: $font-secondary;
+	}
+	&-menu {
+		margin: 2rem 0;
+		li {
+			list-style-type: none;
+			font-size: 15px;
+			max-width: 70px;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+			line-height: 1;
+			padding: 0.8em 0;
+			a {
+				color: $color-white;
+				text-decoration: none;
+				font-size: 13.5px;
+				font-weight: 400;
+				line-height: 13.5px;
+			}
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+	&-address {
+		margin: 35px 0;
+		li {
+			list-style-type: none;
+			font-size: 15px;
+			line-height: 1;
+			padding: 0.6em 0px;
+			&:hover {
+				opacity: 0.8;
+			}
+			span {
+				padding-left: 0.8em;
+				font-size: 13.5px;
+				line-height: 14.85px;
+			}
+		}
+	}
+	&-social {
+		a {
+			color: $color-white;
+			margin: 0 0.2rem;
+			text-decoration: none;
+		}
+	}
+	&-news {
+		margin: 2rem 0;
+	}
+	@media (max-width: 600px) {
+		background-position: center;
+	}
+	@media (min-width: 600px) {
+		background-position: center;
+	}
+}
+.btn-news {
+	font-family: $font-secondary;
+	color: $color-dark;
+	padding: 6px 85px;
+	border-radius: 50px;
+	letter-spacing: 1px;
+	line-height: 37.2px;
+	text-transform: uppercase;
+	background-color: transparent;
+	cursor: pointer;
+	margin-bottom: 45px;
+	font-weight: $fw-1;
+	background-color: $color-white;
+	outline: none;
+	border: 1px solid $color-pink;
+	font-size: 15px;
+	isolation: isolate;
+	transition: all 0.5s;
+	&:hover {
+		background-color: $color-pink;
+		border: 1px solid $color-white;
+		color: $color-white;
+	}
+	&:focus {
+		outline: none !important;
+		border: 1px solid $color-white;
+	}
+}
