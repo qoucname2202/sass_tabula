@@ -3,3 +3,13 @@
 	color: $color !important;
 	font-weight: $fw;
 }
+
+@mixin style-form($border, $padTop, $padRight, $padBottom, $padLeft, $color) {
+	width: 100%;
+	border-radius: $border;
+	padding-top: $padTop;
+	padding-right: $padRight;
+	padding-bottom: $padBottom;
+	padding-left: $padLeft;
+	border: 1px solid $color;
+}
